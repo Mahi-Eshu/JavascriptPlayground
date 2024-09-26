@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+    <form id="userForm" style="width: 50%; border: 1rem; border-color: black;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <div class="error-message" id="nameError"></div>
+
+        <label for="dob">Date of Birth (MM-DD-YYYY):</label>
+        <input type="text" id="dob" required>
+        <div class="error-message" id="dobError"></div>
+
+        <label for="sex">Sex:</label>
+        <select id="sex" required>
+            <option value="">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <div class="error-message" id="sexError"></div>
+
+        <label for="mobile">Mobile No:</label>
+        <input type="text" id="mobile">
+        <div class="error-message" id="mobileError"></div>
+
+        <button type="submit">Submit</button>
+        <button type="reset" onclick="clearAll()">Reset</button>
+    </form>
+
+    <div class="result" id="result"></div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>

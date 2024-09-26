@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Organization Logos</title>
+        <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: black; color: white; }
+        .container { display: flex; flex-wrap: wrap; gap: 20px; }
+        .logo { cursor: pointer; width: 150px; height: 150px; object-fit: contain; border: 2px solid #2f2f2f; border-radius: 10px; }
+        .logo:hover { transform: scale(105%); box-shadow: 5px 5px 20px rgb(179, 179, 179);}
+        .info { margin: 40px 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 2px white solid; border-radius: 30px; padding: 30px; width: 25%;}
+        .info h2 { margin-bottom: 10px; }
+        .info div { margin-bottom: 8px; font-size: 18px; color: rgb(204, 204, 204);}
+        .info span { font-weight: bold; color: white;}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="assets/1.jpg" style="object-fit: cover;" alt="Organization 1" class="logo" data-index="0">
+            <img src="assets/2.jpg" style="object-fit: cover;" alt="Organization 2" class="logo" data-index="1">
+            <img src="assets/3.jpg" style="object-fit: cover;" alt="Organization 3" class="logo" data-index="2">
+            <img src="assets/4.jpg" style="object-fit: cover;" alt="Organization 4" class="logo" data-index="3">
+            <img src="assets/5.jpg" style="object-fit: cover;" alt="Organization 5" class="logo" data-index="4">
+            <img src="assets/6.jpg" style="object-fit: cover;" alt="Organization 6" class="logo" data-index="5">
+            <img src="assets/7.jpg" style="object-fit: cover;" alt="Organization 7" class="logo" data-index="6">
+            <img src="assets/8.jpg" style="object-fit: cover;" alt="Organization 8" class="logo" data-index="7">
+            <img src="assets/7.jpg" style="object-fit: cover;" alt="Organization 9" class="logo" data-index="8">
+            <img src="assets/8.jpg" style="object-fit: cover;" alt="Organization 10" class="logo" data-index="9">
+        </div>
+
+        <div class="info">
+            <h2>Organization Details</h2>
+            <div>Organisation Name: <span id="orgName">N/A</span></div>
+            <div>CEO: <span id="ceo">N/A</span></div>
+            <div>Year Of Start: <span id="year">N/A</span></div>
+            <div>Mouse Button Clicked: <span id="mouseButton">N/A</span></div>
+            <div>Coordinates: <span id="coordinates">N/A</span></div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
