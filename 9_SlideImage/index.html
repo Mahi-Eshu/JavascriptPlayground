@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Sliding Image</title>
+    </head>
+    <body style="display: flex; flex-direction: column; gap: 20px; justify-content: center; align-items: center; background-color: black;">
+        <div class="container">
+            <img src="1.jpg" alt="1jpg" id="slide" style="width: 1000px; height: 800px;">
+        </div>
+        <div>
+            <button id="prev" style="background-color: rgb(110, 110, 110); color: white;">Prev</button>
+            <button id="next" style="background-color: rgb(110, 110, 110); color: white;">Next</button>
+        </div>
+        <script>
+            let slide = document.getElementById('slide')
+            let prev = document.getElementById('prev')
+            let next = document.getElementById('next')
+            let isTransitioning = false
+            const images = [
+                "1.jpg",
+                "2.jpg",
+                "3.jpg",
+                "4.jpg",
+            ]
+            let currIndex = 0
+
+
+            function showPrev(){
+                if(!isTransitioning){
+                    isTransitioning = true
+                    currIndex = (currIndex - 1 + images.length) % images.length
+                    slide.style.opacity = '0'
+                    slide.src = images[currIndex]
+                    setTimeout(()=>{
+                        slide.style.transform = 'translate(-30%)'
+                        slide.style.transform = 'translate(0)'
+                        slide.style.opacity = 1
+                        isTransitioning = false
+                    }, 500)
+                }
+            }
+            function showNext(){
+                if(!isTransitioning){
+                    isTransitioning = true
+                    currIndex = (currIndex + 1) % images.length
+                    slide.style.opacity = '0'
+                    slide.src = images[currIndex]
+                    setTimeout(()=>{
+                        slide.style.transform = 'translate(30%)'
+                        slide.style.transform = 'translate(0)'
+                        slide.style.opacity = 1
+                        isTransitioning = false
+                    }, 500)
+                }
+            }
+            prev.addEventListener('click', showPrev)
+            next.addEventListener('click', showNext)
+        </script>
+    </body>
+</html>

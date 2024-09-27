@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Sprite Image Selector</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+
+        <h1>Image</h1>
+        <img src="1.jpg" alt="1" id="1img" style="height: 400px;">
+
+        <h1>Sprite Image</h1>
+        <div id="spriteContainer"></div>
+
+        <label for="row">Row:</label>
+        <input type="number" id="row" min="0">
+        <label for="column">Column:</label>
+        <input type="number" id="column" min="0">
+        <button onclick="showImage()">Show Image</button>
+        <button onclick="resetImages()">Reset</button>
+        
+        <script src="index.js"></script>
+
+    </body>
+</html>
