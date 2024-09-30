@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+  }
+  #canvas-container{
+    text-align: center;
+    color: white;
+  }
+  .queue{
+    margin: 10px;
+    border: 2px rgb(0, 0, 0) solid;
+  }
+  .clerk{
+    text-decoration: rgb(255, 255, 255);
+  }
+  .person{
+    fill: #4CAF50;
+  }
+  .guy{
+    fill: #FF5722;
+  }
+  #controlBtn{
+    margin-top: 20px;
+  }
